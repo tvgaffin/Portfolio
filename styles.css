@@ -1,0 +1,221 @@
+/* Colors
+#464545	(70,69,69) smokey
+#fefcf9	(254,252,249) soft ivory
+#ebdada	(235,218,218) grayish pink
+#8caba8	(140,171,168) grayish green-blue
+#a2798f (162,121,143) smokey magenta
+ */
+
+/* General styles */
+html {
+box-sizing: border-box;
+font-size: 60%; /* set default */
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+font-family: "Open Sans", system-ui;
+font-size: 2rem;
+line-height: 1.4;   
+background: #ebdada;
+}
+
+h1, h2, h3, h4 {
+font-family: "Edu AU VIC WA NT Hand", cursive;
+font-weight: 450;
+}
+
+h1 {
+font-size: 5rem;
+line-height: 0.85;
+}
+
+h2 {
+font-size: 4rem;
+}
+
+h3 {
+font-size: 2.8rem;
+}
+
+h4 {
+font-size: 2rem;
+}
+
+/* Button */
+.btn {
+margin-top: 10px;
+background-color: #ebdada;
+color: #464545;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+text-transform: uppercase;
+font-size: 1.2rem;
+letter-spacing: .2em;
+transition: background 0.3s ease;
+}
+
+.btn:hover {
+background-color: #7f96b8;
+color: white;
+}
+
+header {
+background: linear-gradient(to bottom right, #ebdada, #8caba8);
+padding: 20px;
+width: 100%;               
+display: flex;
+justify-content: space-between; 
+align-items: center;        
+position: relative;
+}
+
+.logo-nav {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.logo {
+max-width: 150px;
+height: auto;
+}
+
+/* Move navigation to the right side of the page */
+nav {
+margin-left: auto;
+}
+
+.nav-menu {
+display: flex;
+list-style-type: none;
+margin: 0;
+padding: 0;
+flex-wrap: wrap;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+.nav-menu > li {
+display: inline-block;
+position: relative;
+}
+
+
+nav ul li a {
+display: block;
+padding: 10px 20px;
+text-decoration: none;
+color: #464545;
+text-transform: uppercase;
+font-size: 3 rem;
+letter-spacing: 0.1em;
+font-weight: bold;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+/* Grid Section */
+#works {
+text-align: center;
+padding: 20px;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+max-width: 100%;
+margin: 0 auto;
+}
+
+.grid-item {
+text-align: center;
+padding: 10px;
+}
+
+.grid-item img {
+width: 100%;
+height: auto;
+border-radius: 15%;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width:860px) {
+.project-item {
+    display: flow-root;
+}
+.project-item img {
+    float: left;
+    margin-right: 20px;
+}
+}
+
+/* Scrollable Grid for Small Screens */
+@media screen and (max-width: 600px) {
+.grid-container {
+    display: block;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+}
+
+/* Footer Section */
+footer {
+background-color: #a2798f;
+padding: 20px;
+text-align: center;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+.socials {
+list-style-type: none;
+padding: 0;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+}
+
+.socials li {
+margin: 0 10px;
+}
+
+
+/* Responsive Footer */
+@media screen and (max-width: 600px) {
+footer {
+    padding: 10px;
+}
+
+footer h3 {
+    font-size: 14px;
+}
+
+.socials {
+    flex-direction: column;
+}
+
+.socials li {
+    margin-bottom: 10px;
+}
+}
